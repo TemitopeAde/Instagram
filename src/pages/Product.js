@@ -62,8 +62,9 @@ const Product = () => {
               if (searchField === '') {
                 return post
               } else if (post.caption.toLowerCase().includes(searchField.toLowerCase())) {
-                return post;
+                return post
               }
+              return null
             }).map((post,index) => (
               
               <div
@@ -97,7 +98,7 @@ const Product = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
             ))
           
           }

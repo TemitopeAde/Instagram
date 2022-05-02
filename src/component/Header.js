@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar, Container, Nav, Form } from "react-bootstrap";
-import { FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav} from "react-bootstrap";
+
 
 const Header = () => {
   return (

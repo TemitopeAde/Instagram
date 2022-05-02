@@ -1,6 +1,4 @@
 import React from 'react';
-import Carousel from 'react-bootstrap';
-import Skeleton from 'react-loading-skeleton';
 import { Routes } from 'react-router-dom';
 import { BrowserRouter} from 'react-router-dom';
 import { Route } from 'react-router-dom';
@@ -9,6 +7,8 @@ import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/Header';
 import './App.css';
+// import ProductDetails from './pages/ProductDetails';
+// import Product from './pages/Product';
 
 
 const App = () => {
@@ -17,6 +17,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        {/* <Route path='/products/:id' element={<Product />}></Route> */}
       </Routes>
     </BrowserRouter>
   )

@@ -5,8 +5,11 @@ import { useState } from "react";
 const Product = () => {
   const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
- 
+
   const navigate = useNavigate();
+
+  const image =
+    "https://scontent-iad3-2.xx.fbcdn.net/v/t51.2885-15/278836735_315314444046057_1720596797538092646_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=86c713&_nc_eui2=AeEKo5XIb06gqXF_gLYl11M4_HFFgNO50z78cUWA07nTPnf8mCEBu-MgxS-NMzlXNiDDlaHJAGc29CdokcmHUIBY&_nc_ohc=Lzfl5sFjxe4AX_kHVG3&_nc_ht=scontent-iad3-2.xx&edm=AL-3X8kEAAAA&oh=00_AT86cH8US3yUdVCcI3dwn78jJjWR2DRvyUjvWaVYT3zrSw&oe=62728B4D";
 
   const fetchProduct = async () => {
     await fetch(
@@ -24,7 +27,6 @@ const Product = () => {
         // exceptions from actual bugs in components.
         (error) => {
           setIsLoading(false);
-          
         }
       );
   };
@@ -39,7 +41,7 @@ const Product = () => {
     return (
       <div className="product-grid">
         {product.data.map((item) => {
-          const { id, media_url, thumbnail_url } = item;
+          const { id, media_url, caption, media_type, thumbnail_url } = item;
           console.log(media_url)
           return (
             <div
